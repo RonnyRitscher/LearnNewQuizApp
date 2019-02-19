@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">LearnNewQuizApp</string>
+
+    <string name="titel_activity_quiz">Quiz</string>
+
+
+
+    <string name="tv_startScreen_headline">Mein erstes Quiz</string>
+    <string name="tv_startScreen_highscore">Highscore: 0</string>
+
+
+    <string name="tv_quiz_fragenAnzahl">Frage: 1/x</string>
+    <string name="tv_quiz_countDownTime">00:30</string>
+    <string name="tv_quiz_frage">Platzhalter fuer die Fragen</string>
+    <string name="toast_quiz_antwortAngeben">Bitte geben sie eine Antwort an!</string>
+
+    <string name="btn_startScreen_start">Start Quiz</string>
+    <string name="btn_quiz_naechsteFrage">Nächste Frage</string>
+    <string name="btn_quiz_quizBeenden">Quiz beenden...</string>
+
+    <string name="text_punkte">Punkte : </string>
+    <string name="tv_text_schwierigkeit">Schwierigkeit:</string>
+</resources>

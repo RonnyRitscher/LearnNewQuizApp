@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_activity_quiz_horizontal">16dp</dimen>
+    <dimen name="padding_activity_quiz_vertical">16dp</dimen>
+    <dimen name="padding_activity_quiz">16dp</dimen>
+
+    <dimen name="padding_activity_startscreen_horizontal">16dp</dimen>
+    <dimen name="padding_activity_startscreen_vertical">16dp</dimen>
+    <dimen name="padding_activity_startscreen">16dp</dimen>
+
+</resources>

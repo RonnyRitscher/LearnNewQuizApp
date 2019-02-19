@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_activity_quiz"
+    android:background="@color/colorBackground">
+
+    <!-- android:freezesText="true"  damit speichern wir nur den Text beim drehen des Device
+    ! NICHT DEN PUNKTESTAND !-->
+    <TextView
+        android:id="@+id/tv_quiz_punkte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:freezesText="true"
+        android:textColor="@color/colorTextQuiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Punkte: 0" />
+
+    <TextView
+        android:id="@+id/tv_quiz_fragenAnzahl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:freezesText="true"
+        android:text="@string/tv_quiz_fragenAnzahl"
+        android:textColor="@color/colorTextQuiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quiz_punkte" />
+
+    <TextView
+        android:id="@+id/tv_quiz_countDownTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/tv_quiz_countDownTime"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:freezesText="true" />
+
+    <TextView
+        android:id="@+id/tv_quiz_frage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorBackgroundQuizFragen"
+        android:freezesText="true"
+        android:padding="@dimen/padding_activity_quiz"
+        android:text="@string/tv_quiz_frage"
+        android:textColor="@color/colorTextQuiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_anzeige_schwierigkeit" />
+
+    <Button
+        android:id="@+id/btn_quiz_antwort1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorButtonBackgroundDefault"
+        app:layout_constraintEnd_toStartOf="@+id/btn_quiz_antwort2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quiz_frage"
+        tools:text="Antwort1"
+        android:freezesText="true" />
+
+    <Button
+        android:id="@+id/btn_quiz_antwort2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorButtonBackgroundDefault"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_quiz_antwort1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quiz_frage"
+        tools:text="Antwort2"
+        android:freezesText="true" />
+
+    <Button
+        android:id="@+id/btn_quiz_antwort3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorButtonBackgroundDefault"
+        app:layout_constraintEnd_toStartOf="@+id/btn_quiz_antwort4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_quiz_antwort1"
+        tools:text="Antwort3"
+        android:freezesText="true" />
+
+    <Button
+        android:id="@+id/btn_quiz_antwort4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorButtonBackgroundDefault"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_quiz_antwort3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_quiz_antwort2"
+        tools:text="Antwort4"
+        android:freezesText="true" />
+
+    <Button
+        android:id="@+id/btn_quiz_bestaetigen_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorButtonBackgroundDefault"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_quiz_antwort3"
+        tools:text="Bestätigen"
+        android:freezesText="true" />
+
+    <TextView
+        android:id="@+id/tv_anzeige_schwierigkeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_text_schwierigkeit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quiz_fragenAnzahl" />
+
+
+</android.support.constraint.ConstraintLayout>
