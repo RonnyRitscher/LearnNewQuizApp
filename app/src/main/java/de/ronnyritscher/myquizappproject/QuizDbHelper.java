@@ -1,4 +1,4 @@
-package de.proneucon.learnnewquizapp;
+package de.ronnyritscher.myquizappproject;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,12 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
-import android.util.Log;
-import android.view.View;
 
 import java.util.ArrayList;
-import java.util.List;
-import de.proneucon.learnnewquizapp.QuizVertrag.*; // Einbinden der eigenen Klasse
+
+import de.ronnyritscher.myquizappproject.QuizVertrag.*; // Einbinden der eigenen Klasse
 
 
 public class QuizDbHelper extends SQLiteOpenHelper {

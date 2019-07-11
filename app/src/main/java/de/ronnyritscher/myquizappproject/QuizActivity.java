@@ -1,4 +1,4 @@
-package de.proneucon.learnnewquizapp;
+package de.ronnyritscher.myquizappproject;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;

@@ -1,4 +1,4 @@
-package de.proneucon.learnnewquizapp;
+package de.ronnyritscher.myquizappproject;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package de.proneucon.learnnewquizapp;
+package de.ronnyritscher.myquizappproject;
 
 import android.os.Parcel;
 import android.os.Parcelable;

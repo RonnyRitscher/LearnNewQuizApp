@@ -1,4 +1,4 @@
-package de.proneucon.learnnewquizapp;
+package de.ronnyritscher.myquizappproject;
 
 import android.provider.BaseColumns;
 
