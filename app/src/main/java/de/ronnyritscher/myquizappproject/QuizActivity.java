@@ -101,9 +101,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         tv_quiz_schwierigkeit = findViewById(R.id.tv_anzeige_schwierigkeit);
 
         btn_quiz_antwort1 = findViewById(R.id.btn_quiz_antwort1);
+        btn_quiz_antwort1.setClickable(true);
         btn_quiz_antwort2 = findViewById(R.id.btn_quiz_antwort2);
+        btn_quiz_antwort2.setClickable(true);
         btn_quiz_antwort3 = findViewById(R.id.btn_quiz_antwort3);
+        btn_quiz_antwort3.setClickable(true);
         btn_quiz_antwort4 = findViewById(R.id.btn_quiz_antwort4);
+        btn_quiz_antwort4.setClickable(true);
         btn_quiz_bestaetigen_next = findViewById(R.id.btn_quiz_bestaetigen_next);
 
         // Speichert die TextFarbe der Buttons
@@ -148,8 +152,10 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             zeigeNaechsteFrage();
 
         } else {
+
             // LADEN/WIEDERHERSTELLEN der INSTANCE-STATE-DATEN über .getParcelableArrayList()
             fragenListe = savedInstanceState.getParcelableArrayList(KEY_FRAGEN_LISTE);
+
             //um den Fall auszuschließen, dass die geladene Liste NULL ist:
             if(fragenListe == null){
                 finish(); // einige logische variante ist das beenden des quiz
@@ -263,9 +269,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
             //Antworten anzeigen
             btn_quiz_antwort1.setText(aktuelleFrage.getAntwort1());
+            btn_quiz_antwort1.setClickable(true);
             btn_quiz_antwort2.setText(aktuelleFrage.getAntwort2());
+            btn_quiz_antwort2.setClickable(true);
             btn_quiz_antwort3.setText(aktuelleFrage.getAntwort3());
+            btn_quiz_antwort3.setClickable(true);
             btn_quiz_antwort4.setText(aktuelleFrage.getAntwort4());
+            btn_quiz_antwort4.setClickable(true);
 
             frageCounter++; // erhöht den wert der aktuellen Frage
             tv_quiz_fragenAnzahl.setText( "Frage: " +frageCounter+ " von " + frageCounterTotal );
@@ -447,12 +457,16 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "zeigeLoesung: in zeigeLoesung()... ");
         btn_quiz_antwort1.setBackgroundResource(colorButtonBackgroundAntworFalsch);
         btn_quiz_antwort1.setTextColor(colorButtonTextAntwortFalsch);
+        btn_quiz_antwort1.setClickable(false);
         btn_quiz_antwort2.setBackgroundResource(colorButtonBackgroundAntworFalsch);
         btn_quiz_antwort2.setTextColor(colorButtonTextAntwortFalsch);
+        btn_quiz_antwort2.setClickable(false);
         btn_quiz_antwort3.setBackgroundResource(colorButtonBackgroundAntworFalsch);
         btn_quiz_antwort3.setTextColor(colorButtonTextAntwortFalsch);
+        btn_quiz_antwort3.setClickable(false);
         btn_quiz_antwort4.setBackgroundResource(colorButtonBackgroundAntworFalsch);
         btn_quiz_antwort4.setTextColor(colorButtonTextAntwortFalsch);
+        btn_quiz_antwort4.setClickable(false);
 
         switch (aktuelleFrage.getAntwortNr()){
             case 1:

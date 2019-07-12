@@ -33,10 +33,13 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         // Hier erstellen wir die DB-TABLE
         this.db = db;
+
         //Log.d(TAG, "QuizDbHelper: ONCREATE ERREICHT");
-        //final String SQL_CREATE_QUESTIONS_TABLE = "CREATE TABLE " +
+
+        //erstellen der SQLiteDatabase:
         final String SQL_ERSTELLE_FRAGEN_TABELLE = "CREATE TABLE " +
                 QuizFragenTabelle.TABELLE_NAME + " ( " +
                 QuizFragenTabelle._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -48,8 +51,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 QuizFragenTabelle.SPALTE_ANTWORT_NR + " INTEGER, " +
                 QuizFragenTabelle.SPALTE_SCHWIERIGKEIT + " TEXT" +
                 ")";
-        //ausführen der DB mit dem erzeugten TABLE
-        //db.execSQL(SQL_CREATE_QUESTIONS_TABLE);
+
+        //ausführen der DB mit der erzeugten TABLLE
         db.execSQL(SQL_ERSTELLE_FRAGEN_TABELLE);
 
         //füllen der Tabelle mit Fragen:  Methode unten...
@@ -57,8 +60,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     }
 
-    //Bei änderungen an der DB muss dies nicht nur oben angegeben werden, sondern
-    // auch über onUpgrade()
+    //Bei änderungen an der DB muss dies nicht nur oben angegeben werden, sondern auch über onUpgrade()
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //Log.d(TAG, "QuizDbHelper: ONUPGRADE ERREICHT");
@@ -69,19 +71,23 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     private void fuelleFrageTabelle(){
         //Log.d(TAG, "QuizDbHelper: FÜLLE FRAGEN ERREICHT");
-//        //erzeuge eine instanz von Fragen
+//
+//        AUFBAU DER FRAGEN:
 //        Fragen f1 = new Fragen(
-//                Fragen.SCHWIERIGKEIT_LEICHT +": \n"+"A ist korrekt",  //Frage
-//                "A",            //Antwort1
-//                "B",            //Antwort2
-//                "C",            //Antwort3
-//                "D",            //Antwort4
-//                1 ,            //RichtigeAntwortIst
-//                Fragen.SCHWIERIGKEIT_LEICHT      // Schwierigkeit
+//                Fragen.SCHWIERIGKEIT_XY +": \n"+
+//                "A ist korrekt",                  //Frage
+//                "A",                              //Antwort1
+//                "B",                              //Antwort2
+//                "C",                              //Antwort3
+//                "D",                              //Antwort4
+//                1 ,                               //RichtigeAntwortIst
+//                Fragen.SCHWIERIGKEIT_LEICHT       //Schwierigkeit
 //                );
 //        //hinzufügen der Fragen in die db
 //        fragenHinzufuegen(f1);
         //.....................................................................
+
+        //erzeuge eine instanz von Fragen
         Fragen f1 = new Fragen("Leicht: "+"A ist korrekt",
                 "A", "B", "C", "D", 1 , Fragen.SCHWIERIGKEIT_LEICHT );
         fragenHinzufuegen(f1);
