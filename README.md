@@ -1,4 +1,4 @@
-# RP-MyQuizAppDemo
+# MyQuizAppDemo
 
 
 Ziel: 
