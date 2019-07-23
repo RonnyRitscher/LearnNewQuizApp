@@ -13,13 +13,13 @@ Beschreibung des Projekts:
 - Zeitbegrenzung für einzelne Fragen umsetzen (Timer/Counter)
 - Erstellung von Dummy-Daten zum Testen der App
 
-Entwickler/Developer:
-- Ronny Ritscher - RAAD (Ritscher Android App Development)
-
 Stand:
 - imlementierung der Funktionen finalsiert und getestet
 - Aussehen GUI und App-Eigenschaften können noch einmal überarbeitet werden
 - (Demo-Projekt muss finalisiert werden!)
+
+Entwickler/Developer:
+- Ronny Ritscher - RAAD (Ritscher Android App Development)
 
 
 
